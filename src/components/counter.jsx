@@ -22,6 +22,9 @@ class Counter extends Component {
         <button onClick={this.handleClick} type="button" className="btn btn-secondary">
           Cancel
         </button>
+        <button  type="button" className="btn btn-secondary">
+          Exit
+        </button>
       </div>
     );
   }
