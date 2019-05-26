@@ -2,42 +2,37 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    count: 0,
-    tags : ["tag1","tag2","tag3","tag4","tag5"]
+    count: this.props.value
   };
-  constructor(){
-    super();
+
+  constructor(props) {
+    super(props);
     this.handleClick = this.handleClick.bind(this);
-    
   }
   render() {
+    console.log(this.props);
+
     return (
       <div>
-        <h1>Hello World</h1>
+
+        {this.props.children}
         <span className={this.getClasses()}>{this.formatCode()}</span>
-        {this.renderTags()}
-        <button type="button" className="btn btn-primary">
-          Primary Bootsrap Button
+
+        <button
+          onClick={this.handleClick}
+          type="button"
+          className="btn btn-secondary m-2"
+        >
+          Increment
         </button>
-        <button onClick={this.handleClick} type="button" className="btn btn-secondary">
-          Cancel
-        </button>
-        <button  type="button" className="btn btn-secondary">
-          Exit
-        </button>
+        <button className="btn btn-danger btn-sm m-2">Delete</button>
       </div>
     );
   }
-  handleClick(){
-    this.setState({count: this.state.count+1});
+  handleClick() {
+    this.setState({ count: this.state.count + 1 });
   }
 
-  renderTags(){
-    if(this.state.tags.length===0){
-      return <p>There are no tags</p>
-    }
-    return <ul>{this.state.tags.map(tag =><li key={tag}>{tag}</li>)}</ul>;
-  }
   getClasses() {
     let classes = "badge badge-pill badge-";
     classes += this.state.count === 0 ? "warning" : "primary";
