@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 //import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Counter from './components/counter';
+import Counter from './components/Counter';
+import Counter from './components/Counters';
 
 ReactDOM.render(<Counter />, document.getElementById('root'));
 
