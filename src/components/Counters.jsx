@@ -22,7 +22,6 @@ class Counters extends Component {
     const counters = this.state.counters.filter(c => c.id !== counterId);
     this.setState({ counters: counters });
   };
-
   handleRestet = () => {
       const counters = this.state.counters.map(c => {
           c.value =0;
