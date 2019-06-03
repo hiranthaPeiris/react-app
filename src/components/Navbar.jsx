@@ -8,6 +8,7 @@ const Navbar = props => {
         <span className="badge badge-pill badge-secondary">
           {props.totalCounters}
         </span>
+        <span className="badge badge-pill badge-secondary"></span>
       </nav>
     </div>
   );
