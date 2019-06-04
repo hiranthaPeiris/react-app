@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Counters from "./components/counters";
 import Navbar from "./components/Navbar";
+import SideBar from "./components/SideBar";
 
 class App extends Component {
   state = {
@@ -40,13 +41,14 @@ class App extends Component {
         <Navbar
           totalCounters={this.state.counters.filter(c => c.value > 0).length}
         />
-        <main className="container con-flu">
+        <main className="container-fluid">
           <Counters
             counters={this.state.counters}
             onRest={this.handleRest}
             onDelete={this.handleDelete}
             onIncrement={this.handleIncrement}
           />
+          <SideBar/>
         </main>
       </React.Fragment>
     );
