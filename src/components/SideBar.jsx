@@ -50,6 +50,12 @@ class SideBar extends Component {
                   Settings <span class="sr-only" />
                 </a>
               </li>
+              <li className="nav-item">
+                <a class="nav-link active" href="#">
+                  <span data-feather="home" />
+                  Orders <span class="sr-only" />
+                </a>
+              </li>
             </ul>
           </div>
         </div>
